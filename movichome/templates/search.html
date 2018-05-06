@@ -1,0 +1,18 @@
+{% extends 'header.html'%}
+{% block body %}
+<div>
+    {% if desc %}
+        {% for page in desc%}
+        <div>
+            Result Description 1 
+            <p>{{page.description}}</p>
+            Result Description 2
+            <p>{{page.description_2}}</p>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h1>No result found!</h1>
+    {% endif%}
+    <a href="http://127.0.0.1:8000/home">HOME</a>
+</div>
+{% endblock %}
