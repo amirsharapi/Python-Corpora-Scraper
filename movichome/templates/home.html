@@ -1,0 +1,7 @@
+{% extends 'header.html' %}
+{% block body%}
+  <form action="{% url 'search:result' %}" role="form" method="POST">
+    {% csrf_token %}
+    <input type="text" name="userkeyword" size="30"><button type="submit">Search</button>
+  </form>
+{% endblock %}
